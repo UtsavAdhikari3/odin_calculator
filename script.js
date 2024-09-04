@@ -35,3 +35,13 @@ function operate(operand1, operand2){
             break;
     }
 }
+
+const buttons = document.querySelectorAll(".buttons button");
+const output = document.querySelector(".output");
+
+const displayValue = Array.from(buttons).map(button => {
+    button.addEventListener("click",()=>{
+         console.log(button.textContent);
+    });
+});
+
