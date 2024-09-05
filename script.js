@@ -1,3 +1,8 @@
+let operand1 = "";
+let operand2 = "";
+let operator = "";
+let display = "";
+
 
 function add(operand1,operand2){
     return operand1 + operand2;
@@ -32,50 +37,18 @@ function operate(operand1, operand2){
     }
 }
 
-const buttons = document.querySelectorAll(".buttons button")
-const output = document.querySelector(".output output")
-const operators = document.querySelectorAll(".operators button")
+const buttons = document.querySelectorAll(".buttons button");
+const output = document.querySelector(".output output");
+const operators = document.querySelectorAll(".operators button");
+const container = document.querySelector(".container");
 
 
-function getOperand1(){
-    let displayValue = '';
-    let operand1 = '';
-    buttons.forEach((element)=>{
-        element.addEventListener("click",()=>{
-            if(displayValue.length === 0){
-                operand1 = displayValue + element.textContent;
-            }
-        })
-    })
-}
+
+// container.addEventListener("click",displayOutput)
+console.log(displayOutput())
 
 
-function getOperator(operand1){
-    operators.forEach((element)=>{
-        element.addEventListener("click",()=>{
-            if(operand1.length === 0){
-                return NaN;
-            }
-            else{
-                displayValue = operand1 + element.textContent;
-                console.log(displayValue);
-            }
-        })
-    })
-}
 
-function getOperator2(displayValue){
-    buttons.forEach(element=>{
-        element.addEventListener("click",()=>{
-            if(displayValue.length === 0){
-                return NaN;
-            }
-            else{
-                displayValue = displayValue + element.textContent
-            }
-        })
-    })
-}
 
 
 
